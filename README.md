@@ -36,9 +36,9 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
 
 ### Steps to make it for on OSx
 Assumption: The following are successfully installed (see instructions above):
-1. cmake >= 3.11.3,
-2. make >= 4.1 and
-3. g++ >= 7.4.0
+* cmake >= 3.11.3,
+* make >= 4.1 and
+* g++ >= 7.4.0
 
 Follow these steps to install IO2D:
 1. Download a fresh build of libc++ from http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz
