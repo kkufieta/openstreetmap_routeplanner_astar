@@ -34,15 +34,15 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
 
 ## Compiling and Running
 
-### Steps to make it for work OSx users
+### Steps to make it for on OSx
 Assumption: The following are successfully installed (see instructions above):
 1. cmake >= 3.11.3,
 2. make >= 4.1 and
 3. g++ >= 7.4.0
 
 Follow these steps to install IO2D:
-1) Download a fresh build of libc++ from http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz
-2) Export appropriate CXX and LD flags to make clang use this version of the standard library (replace NEWPATH with a path of extracted archive contents):
+1. Download a fresh build of libc++ from http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz
+2. Export appropriate CXX and LD flags to make clang use this version of the standard library (replace NEWPATH with a path of extracted archive contents):
   * In my machine, I unzipped the libc++ build here, `/Users/kat/Library/Cpp/`.
   * I added following entries in `.bash_profile` file:
   ```bash
@@ -50,18 +50,19 @@ Follow these steps to install IO2D:
     export LDFLAGS="-L/Users/kat/Library/Cpp/clang+llvm-6.0.0-x86_64-apple-darwin/lib -Wl,-rpath,/Users/kat/Library/Cpp/clang+llvm-6.0.0-x86_64-apple-darwin/lib"
   ```
 3. Open a new terminal and then execute below commands:
-  1. Install Brew (if you haven't already): /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  2. Install libpng (if you haven't already): brew install libpng
-  3. git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
-    * Note: I cloned this folder also inside /Users/kat/Cpp/
-  4. cd P0267_RefImpl
-  5. mkdir Debug
-  6. cd Debug
-  7. cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" -DIO2D_DEFAULT=COREGRAPHICS_MAC ..
-  8. cmake --build .
-  9. make
-  10. sudo make install
-4. After this, this project should build as described below.
+4. Install Brew (if you haven't already): `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+5. Install libpng (if you haven't already): `brew install libpng`
+6. `git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl` **Note:** I cloned this folder also inside `/Users/kat/Cpp/`
+ ```bash
+ cd P0267_RefImpl
+ mkdir Debug
+ cd Debug
+ cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" -DIO2D_DEFAULT=COREGRAPHICS_MAC ..
+ cmake --build .
+ make
+ sudo make install
+ ```
+7. After this, this project should build as described below.
 
 ### Compiling
 To compile the project, first, create a `build` directory and change to that directory:
