@@ -44,7 +44,7 @@ Follow these steps to install IO2D:
 1. Download a fresh build of libc++ from http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz
 2. Export appropriate CXX and LD flags to make clang use this version of the standard library (replace NEWPATH with a path of extracted archive contents):
   * In my machine, I unzipped the libc++ build here, `/Users/kat/Library/Cpp/`.
-  * I added following entries in `.bash_profile` file:
+  * I added following entries in `.bash_profile` file (make sure to replace my path `/Users/kat/Library/Cpp/` with the path where you've saved the libc++ build):
   ```bash
     export CXXFLAGS="-nostdinc++ -isystem/Users/kat/Library/Cpp/clang+llvm-6.0.0-x86_64-apple-darwin/include/c++/v1"
     export LDFLAGS="-L/Users/kat/Library/Cpp/clang+llvm-6.0.0-x86_64-apple-darwin/lib -Wl,-rpath,/Users/kat/Library/Cpp/clang+llvm-6.0.0-x86_64-apple-darwin/lib"
@@ -52,7 +52,7 @@ Follow these steps to install IO2D:
 3. Open a new terminal and then execute below commands:
 4. Install Brew (if you haven't already): `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 5. Install libpng (if you haven't already): `brew install libpng`
-6. `git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl` **Note:** I cloned this folder also inside `/Users/kat/Cpp/`
+6. `git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl` **Note:** I cloned this folder also inside `/Users/kat/Library/Cpp/`
  ```bash
  cd P0267_RefImpl
  mkdir Debug
@@ -62,7 +62,7 @@ Follow these steps to install IO2D:
  make
  sudo make install
  ```
-7. After this, this project should build as described below.
+7. After this, this project should build by following the steps below.
 
 ### Compiling
 To compile the project, first, create a `build` directory and change to that directory:
