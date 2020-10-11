@@ -6,3 +6,6 @@ test.cpp
 build/
 bin/
 lib/
+
+# OSx specific
+*Icon*
