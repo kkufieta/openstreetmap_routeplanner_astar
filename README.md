@@ -10,11 +10,7 @@ It is part of the [C++ Nanodegree](https://www.udacity.com/course/c-plus-plus-na
 
 When cloning this project, be sure to use the `--recurse-submodules` flag. Using HTTPS:
 ```
-git clone https://github.com/udacity/CppND-Route-Planning-Project.git --recurse-submodules
-```
-or with SSH:
-```
-git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-submodules
+git clone https://github.com/kkufieta/openstreetmap_routeplanner_astar.git --recurse-submodules
 ```
 
 ## Dependencies for Running Locally
