@@ -53,14 +53,24 @@ int main(int argc, const char **argv) {
 
   // Get the user input for the start and end point x & y values.
   float start_x, start_y, end_x, end_y;
-  std::cout << "Enter start_x: ";
-  std::cin >> start_x;
-  std::cout << "Enter start_y: ";
-  std::cin >> start_y;
-  std::cout << "Enter end_x: ";
-  std::cin >> end_x;
-  std::cout << "Enter end_y: ";
-  std::cin >> end_y;
+  bool valid_input = false;
+  while (!valid_input) {
+    std::cout << "Enter start_x: ";
+    std::cin >> start_x;
+    std::cout << "Enter start_y: ";
+    std::cin >> start_y;
+    std::cout << "Enter end_x: ";
+    std::cin >> end_x;
+    std::cout << "Enter end_y: ";
+    std::cin >> end_y;
+    if (start_x >= 0 && start_x <= 100 && start_y >= 0 && start_y <= 100 &&
+        end_x >= 0 && end_x <= 100 && end_y >= 0 && end_y <= 100) {
+      valid_input = true;
+    } else {
+      std::cout << "Start and End point coordinates {x, y} must "
+                << "be in the range of [0, 100].\n";
+    }
+  }
   std::cout << "Find path from: "
             << "{" << start_x << ", " << start_y << "} => "
             << "{" << end_x << ", " << end_y << "}\n";
