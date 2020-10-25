@@ -90,6 +90,7 @@ void RoutePlanner::AStarSearch() {
       // Save the final path in the RouteModel
       m_Model.path = this->ConstructFinalPath(current_node);
       std::cout << "Total Distance: " << this->GetDistance() << "\n";
+      break;
     }
     // Add all neighbors of the current node to the open_list.
     this->AddNeighbors(current_node);
